@@ -48,3 +48,7 @@ app.get("/", (req, res, next) => {
   res.send("You shall not pass");
 });
 ```
+
+## Views
+
+Express can serve dynamic content. You can use a templating engine to serve HTML files. You can use EJS, Pug, Mustache, and many more.
