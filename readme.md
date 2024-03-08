@@ -52,3 +52,7 @@ app.get("/", (req, res, next) => {
 ## Views
 
 Express can serve dynamic content. You can use a templating engine to serve HTML files. You can use EJS, Pug, Mustache, and many more. I personally don't serve HTML files with express, but I use it to serve JSON data. I use it to build APIs.
+
+## Conclusion
+
+Express is a must learn for every JavaScript developer. Even if you are not a backend developer, you should know how to build a server.
