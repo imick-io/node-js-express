@@ -34,3 +34,17 @@ app.use((req, res, next) => {
   res.send("You shall not pass");
 });
 ```
+
+### Parsing the body
+
+With Express, you can easily add a middleware to parse the body of the request. To make sure you have the `body-parser` middleware, you can install it with npm `npm i body-parser`.
+
+### Methods
+
+With Express, it is possible to scope a middleware to a specific HTTP method. For example, you can have a middleware that only accepts `GET` requests. Here's an example of a middleware that only accepts `GET` requests.
+
+```javascript
+app.get("/", (req, res, next) => {
+  res.send("You shall not pass");
+});
+```
