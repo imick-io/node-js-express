@@ -19,6 +19,12 @@ app.use((req, res, next) => {
 
 In that function, the `middleware` or bodyguard will let you pass through by calling the `next()` function. If you don't call `next()`, the request will be stuck in that middleware. Like if you were stuck at the airport security checkpoint and you didn't have your passport.
 
+### Middleware function
+
+The middleware function `app.use` accepts a path and can also accept a series of callbacks. The path is not the absolute path, but the beginning of the URL. For example, the `/` path will accept all requests. The `/api` path will accept all requests that start with `/api`. So, since the request goes from top to bottom, you can have a series of middlewares that only accept requests that start with `/api` for example.
+
+So, you can set the last `/` path to serve has a 404 page. Here's an example of a middleware that serves a 404 page.
+
 ### Send a response
 
 When going through the series of middlewares or `gates`, you need to have an answer at some point. You can send a response with `res.send`. Here's an example of a middleware that sends a response.
